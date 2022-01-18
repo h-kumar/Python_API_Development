@@ -8,6 +8,12 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "^3.9"
 fastapi = {extras = ["all"], version = "^0.71.0"}
+psycopg2-binary = "^2.9.3"
+SQLAlchemy = "^1.4.29"
+passlib = "^1.7.4"
+bcrypt = "^3.2.0"
+pip = "^21.3.1"
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
 
 [tool.poetry.dev-dependencies]
 autopep8 = "^1.6.0"
