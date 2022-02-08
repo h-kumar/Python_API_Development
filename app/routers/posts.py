@@ -1,4 +1,3 @@
-from itertools import groupby
 from ntpath import join
 from .. import models, schemas, oauth2
 from typing import List, Optional

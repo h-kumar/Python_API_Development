@@ -1,4 +1,3 @@
-from pyexpat import model
 from .. import models, schemas, utils
 from fastapi import status, HTTPException, Depends, APIRouter
 from ..database import get_db

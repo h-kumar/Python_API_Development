@@ -1,4 +1,3 @@
-from email.policy import HTTP
 from hashlib import new
 from fastapi import Response, status, HTTPException, Depends, APIRouter
 from .. import schemas, database, models, oauth2
