@@ -1,7 +1,9 @@
+from pyexpat import model
 from .. import models, schemas, utils
 from fastapi import status, HTTPException, Depends, APIRouter
 from ..database import get_db
 from sqlalchemy.orm import Session
+from typing import List
 
 
 router = APIRouter(
@@ -27,3 +29,9 @@ def get_user(id: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
                             detail=f"user with id:{id} does not exist")
     return user
+
+@router.get("/", response_model=List[schemas.UserDetails])
+def get_Users(db: Session = Depends(get_db)):
+    users = db.query(models.User).all()
+    return users
+
